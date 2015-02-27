@@ -127,7 +127,7 @@ if (isset($_SESSION['message'])){
     unset($_SESSION['message']);
 }
 
-$stmt = $db->prepare("SELECT * FROM smgrp ORDER BY id");
+$stmt = $db->prepare("SELECT * FROM smgrp ORDER BY weekId");
 $stmt->execute();
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
